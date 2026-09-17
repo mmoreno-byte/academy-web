@@ -1,39 +1,47 @@
 const courses = [
   {
     id: 'ingles',
+    flag: '🇬🇧',
     title: 'Inglés',
-    description:
-      'De cero a fluidez profesional. Grupos generales y cursos de Business English para el entorno de trabajo.',
-    formats: ['Grupos reducidos (máx. 8)', 'Clases particulares 1 a 1', 'Preparación Cambridge (First, Advanced)', 'Business English'],
+    tagline: 'De cero a fluidez profesional.',
+    levels: ['A1', 'A2', 'B1', 'B2', 'C1', 'C2'],
+    formats: ['Grupo reducido', '1 a 1', 'Cambridge', 'Business'],
   },
   {
     id: 'frances',
+    flag: '🇫🇷',
     title: 'Francés',
-    description:
-      'Iniciación y perfeccionamiento con enfoque comunicativo, pensado para viajar, estudiar o trabajar en francés.',
-    formats: ['Grupos reducidos (máx. 8)', 'Clases particulares 1 a 1', 'Preparación DELF / DALF', 'Conversación e inmersión'],
+    tagline: 'Para viajar, estudiar o trabajar en francés.',
+    levels: ['A1', 'A2', 'B1', 'B2', 'C1'],
+    formats: ['Grupo reducido', '1 a 1', 'DELF / DALF', 'Inmersión'],
   },
   {
     id: 'aleman',
+    flag: '🇩🇪',
     title: 'Alemán',
-    description:
-      'Desde A1 hasta niveles avanzados, con especial atención a la gramática y la práctica oral desde el primer día.',
-    formats: ['Grupos reducidos (máx. 8)', 'Clases particulares 1 a 1', 'Preparación Goethe-Zertifikat', 'Alemán para el trabajo'],
+    tagline: 'Gramática con práctica oral desde el primer día.',
+    levels: ['A1', 'A2', 'B1', 'B2', 'C1'],
+    formats: ['Grupo reducido', '1 a 1', 'Goethe-Zertifikat', 'Trabajo'],
   },
 ]
 
 function CourseCard({ course }) {
   return (
-    <div className="practice-card card reveal">
+    <div className="course-card reveal">
+      <div className="course-flag">{course.flag}</div>
       <h3>{course.title}</h3>
-      <p>{course.description}</p>
-      <div className="practice-areas">
-        <p className="areas-label">Formatos disponibles:</p>
-        <ul>
-          {course.formats.map((format) => (
-            <li key={format}>• {format}</li>
-          ))}
-        </ul>
+      <p className="course-tagline">{course.tagline}</p>
+
+      <div className="course-levels">
+        {course.levels.map((level) => (
+          <span key={level} className="level-chip">{level}</span>
+        ))}
+      </div>
+
+      <div className="course-formats">
+        {course.formats.map((format) => (
+          <span key={format} className="format-pill">{format}</span>
+        ))}
       </div>
     </div>
   )
