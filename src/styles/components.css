@@ -102,15 +102,25 @@
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  align-items: start;
+  grid-template-columns: 1fr auto;
+  gap: 2rem 3rem;
+  align-items: center;
 }
 
 .hero-text h1 {
   color: var(--bg-white);
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   font-size: 2.5rem;
+}
+
+.hero-byline {
+  font-size: 1rem;
+  color: var(--accent);
+  margin-bottom: 1.25rem;
+}
+
+.hero-byline strong {
+  color: var(--bg-white);
 }
 
 .hero-description {
@@ -119,6 +129,66 @@
   margin-bottom: 2rem;
   line-height: 1.7;
   max-width: 600px;
+}
+
+.hero-demo-note {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.55);
+  font-style: italic;
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+}
+
+.hero-text {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.hero-avatar {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 10px;
+}
+
+.hero-stats {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 900px) {
+  .hero-content {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .hero-avatar {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .hero-text {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-stats {
+    grid-column: 1;
+    justify-content: center;
+  }
 }
 
 .hero-cta {
@@ -385,6 +455,23 @@
   height: 8px;
   background-color: var(--accent);
   border-radius: 50%;
+}
+
+.about-quote {
+  font-family: 'Poppins', sans-serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--text-dark);
+  border-left: 3px solid var(--accent);
+  padding-left: 1.25rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+.about-signature {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 0;
 }
 
 .about-highlights {

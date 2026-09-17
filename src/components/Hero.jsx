@@ -1,10 +1,15 @@
+import Avatar from './Avatar'
+
 export default function Hero() {
   return (
     <section id="inicio" className="hero">
       <div className="container hero-content">
         <div className="hero-text reveal">
-          <span className="eyebrow">Escuela de Idiomas</span>
+          <span className="eyebrow">Academia Lingua</span>
           <h1>Habla otro idioma con confianza, no solo de memoria.</h1>
+          <p className="hero-byline">
+            <strong>Marta Calvo</strong> · fundadora y profesora de inglés
+          </p>
           <p className="hero-description">
             Clases de inglés, francés y alemán para todos los niveles, con grupos reducidos
             y profesorado nativo. Se habla desde la primera clase.
@@ -17,7 +22,15 @@ export default function Hero() {
               Ver cursos
             </a>
           </div>
+          <p className="hero-demo-note">
+            Sitio demo · Los datos de contacto y el calendario de reservas no están activos
+          </p>
         </div>
+
+        <div className="hero-avatar reveal">
+          <Avatar size={220} />
+        </div>
+
         <div className="hero-stats reveal">
           <div className="stat">
             <span className="stat-number">12+</span>

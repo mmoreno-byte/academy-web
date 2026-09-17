@@ -3,18 +3,18 @@ export default function About() {
     <section id="sobre-nosotros" className="about">
       <div className="container about-content">
         <div className="about-text reveal">
-          <span className="eyebrow">Quiénes Somos</span>
+          <span className="eyebrow">Quién Enseña</span>
           <h2>Aprender un idioma no debería ser aburrido.</h2>
           <p>
-            Somos una academia de idiomas con más de 12 años formando alumnos en inglés,
-            francés y alemán. Nació de la idea de que las clases tradicionales, centradas
-            solo en gramática y exámenes, dejan a la gente sin poder mantener una
-            conversación real.
+            Soy Marta, fundé Academia Lingua hace 12 años después de dar clases particulares
+            de inglés en mi salón durante dos. Me cansé de ver alumnos que llevaban años
+            "estudiando" un idioma y seguían sin atreverse a pedir un café en él.
           </p>
           <p>
-            Por eso nuestros grupos son reducidos, nuestro profesorado es nativo o
-            bilingüe certificado, y desde la primera clase se habla el idioma que estás
-            aprendiendo. Cero vergüenza, cero prisa.
+            Por eso aquí se habla desde la primera clase. La gramática se trabaja, claro,
+            pero como apoyo, nunca como punto de partida. Los grupos son reducidos a
+            propósito: con más de 8 personas ya no puedo garantizar que todo el mundo hable
+            en cada clase, y eso no lo negocio.
           </p>
           <h3 style={{ marginTop: '2rem' }}>Nuestros Valores</h3>
           <ul className="values-list">
@@ -23,6 +23,13 @@ export default function About() {
             <li><strong>Profesorado nativo:</strong> certificado y con experiencia docente real</li>
             <li><strong>Horarios flexibles:</strong> mañana, tarde y sábados</li>
           </ul>
+
+          <p className="about-quote">
+            Si buscas una academia para tu hijo de 8 años o un curso puramente gramatical
+            sin hablar, no somos la opción adecuada — te lo digo yo misma para que no
+            pierdas el tiempo.
+          </p>
+          <p className="about-signature">— Marta Calvo, fundadora de Academia Lingua</p>
         </div>
 
         <div className="about-highlights reveal">
